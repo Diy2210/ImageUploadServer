@@ -22,6 +22,7 @@
 		1D3BF2B61DAE3C21004FB08D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D3BF2B91DAE3C21004FB08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D3BF2BB1DAE3C21004FB08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D3BF2C21DAE51BA004FB08D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 			children = (
 				1D3BF2AE1DAE3C21004FB08D /* ImageUploadTest */,
 				1D3BF2AD1DAE3C21004FB08D /* Products */,
+				1D3BF2C11DAE51BA004FB08D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +64,14 @@
 				1D3BF2BB1DAE3C21004FB08D /* Info.plist */,
 			);
 			path = ImageUploadTest;
+			sourceTree = "<group>";
+		};
+		1D3BF2C11DAE51BA004FB08D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D3BF2C21DAE51BA004FB08D /* CoreImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

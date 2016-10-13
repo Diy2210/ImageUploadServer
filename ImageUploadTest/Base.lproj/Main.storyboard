@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageUploadTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hFE-R0-vQl">
+                                <color key="backgroundColor" red="0.82684990286994819" green="0.6198079326411372" blue="0.1616369904771687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Upload Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF9-yc-Eeo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DD1-4q-W5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ3-TZ-jZf">
+                                <color key="backgroundColor" red="0.023612521120787495" green="0.89736479922279788" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8CX-62-uL0"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sc7-dL-mEG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="VXe-BM-1Uk"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tip-I4-fZF">
+                                <color key="backgroundColor" red="0.96198996113989632" green="0.91870905282504145" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Td9-1q-0zx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95913617227979275" green="0.72035378207123779" blue="0.1797231438440357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hFE-R0-vQl" firstAttribute="top" secondItem="TF9-yc-Eeo" secondAttribute="bottom" constant="8" symbolic="YES" id="3rU-tQ-7MF"/>
+                            <constraint firstItem="TF9-yc-Eeo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4fX-tI-E3w"/>
+                            <constraint firstItem="sc7-dL-mEG" firstAttribute="leading" secondItem="Tip-I4-fZF" secondAttribute="trailing" constant="56" id="6OA-Ts-VvL"/>
+                            <constraint firstItem="TF9-yc-Eeo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9Lt-kb-F6u"/>
+                            <constraint firstItem="Tip-I4-fZF" firstAttribute="top" secondItem="TZ3-TZ-jZf" secondAttribute="top" id="FLZ-Jq-OT9"/>
+                            <constraint firstItem="TF9-yc-Eeo" firstAttribute="trailing" secondItem="hFE-R0-vQl" secondAttribute="trailing" id="R72-fU-56w"/>
+                            <constraint firstItem="Tip-I4-fZF" firstAttribute="centerY" secondItem="sc7-dL-mEG" secondAttribute="centerY" id="Z2o-Qe-pcT"/>
+                            <constraint firstItem="hFE-R0-vQl" firstAttribute="centerX" secondItem="sc7-dL-mEG" secondAttribute="centerX" id="gje-SO-llT"/>
+                            <constraint firstItem="Tip-I4-fZF" firstAttribute="baseline" secondItem="TZ3-TZ-jZf" secondAttribute="firstBaseline" id="iWq-cP-PPg"/>
+                            <constraint firstItem="TZ3-TZ-jZf" firstAttribute="leading" secondItem="sc7-dL-mEG" secondAttribute="trailing" constant="57" id="q1k-Lu-Wzn"/>
+                            <constraint firstItem="TF9-yc-Eeo" firstAttribute="leading" secondItem="hFE-R0-vQl" secondAttribute="leading" id="qc3-6r-jkT"/>
+                            <constraint firstItem="hFE-R0-vQl" firstAttribute="leading" secondItem="Tip-I4-fZF" secondAttribute="leading" id="qgC-ma-U7X"/>
+                            <constraint firstItem="TF9-yc-Eeo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="s1a-LA-XEU"/>
+                            <constraint firstItem="TZ3-TZ-jZf" firstAttribute="baseline" secondItem="Tip-I4-fZF" secondAttribute="firstBaseline" id="sQG-QD-ai9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tip-I4-fZF" secondAttribute="bottom" constant="380" id="scG-S0-m69"/>
+                            <constraint firstItem="hFE-R0-vQl" firstAttribute="trailing" secondItem="TZ3-TZ-jZf" secondAttribute="trailing" id="vyI-dQ-SSZ"/>
+                            <constraint firstItem="sc7-dL-mEG" firstAttribute="top" secondItem="hFE-R0-vQl" secondAttribute="bottom" constant="13" id="wLW-2r-unh"/>
+                            <constraint firstItem="Tip-I4-fZF" firstAttribute="top" secondItem="hFE-R0-vQl" secondAttribute="bottom" constant="8" symbolic="YES" id="wqa-IW-RVi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="sc7-dL-mEG" id="r96-Tw-KD1"/>
+                        <outlet property="imageView" destination="hFE-R0-vQl" id="EaM-ul-2dd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
